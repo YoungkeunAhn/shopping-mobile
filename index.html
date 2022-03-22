@@ -20,9 +20,13 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
   </head>
-  <body>
-    <div style="max-width: 700px" class="flex flex-col m-auto">
+  <body class="overflow-hidden">
+    <div
+      style="max-width: 700px"
+      class="flex flex-col m-auto relative h-screen"
+    >
       <header class="flex justify-between w-full border">
         <h1 class="p-4">쇼핑몰</h1>
         <ul class="flex justify-center items-center">
@@ -32,15 +36,124 @@
         </ul>
       </header>
       <main>
-        <div class="flex space-x-4">
-          <div class="w-1/2 flex flex-col">
-            <img src="" alt="" />
+        <div class="swiper w-full">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="image/banner1.webp"
+                alt="banner"
+                class="w-full h-full"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="image/banner2.jpg" alt="banner" class="w-full h-full" />
+            </div>
+            <div class="swiper-slide">
+              <img src="image/banner3.jpg" alt="banner" class="w-full h-full" />
+            </div>
+          </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="w-full mt-10">
+          <h1 class="text-xl border-b pb-3 mb-3">추천상품</h1>
+          <div class="grid grid-rows-2 grid-flow-col gap-10">
+            <div class="w-full flex flex-col">
+              <!-- 이미지 -->
+              <img
+                src="image/item1.jpg"
+                alt="item"
+                width="100%"
+                class="object-contain border"
+              />
+              <!-- 제목 -->
+              <div class="flex items-center mt-3">
+                <h1>건강식품 세트</h1>
+                <span
+                  class="rounded-md bg-blue-400 text-white pt-1 pb-1 pl-2 pr-2 ml-3"
+                  >건강식</span
+                >
+              </div>
+              <!-- 카테고리 -->
+              <div>
+                <script>
+                  numeral(30000).format('0,0')
+                </script>
+                30,000원
+              </div>
+              <div class="mt-2 border-t pt-2">
+                먹으면 건강해지는 식품. 흑마늘. 홍삼청 스틱형, 포
+              </div>
+            </div>
+            <div class="w-full flex flex-col">
+              <!-- 이미지 -->
+              <img
+                src="image/item1.jpg"
+                alt="item"
+                width="100%"
+                class="object-contain border"
+              />
+              <!-- 제목 -->
+              <div class="flex items-center mt-3">
+                <h1>건강식품 세트</h1>
+                <span
+                  class="rounded-md bg-blue-400 text-white pt-1 pb-1 pl-2 pr-2 ml-3"
+                  >건강식</span
+                >
+              </div>
+              <!-- 카테고리 -->
+              <div>
+                <script>
+                  numeral(30000).format('0,0')
+                </script>
+                30,000원
+              </div>
+              <div class="mt-2 border-t pt-2">
+                먹으면 건강해지는 식품. 흑마늘. 홍삼청 스틱형, 포
+              </div>
+            </div>
+            <div class="w-full flex flex-col">
+              <!-- 이미지 -->
+              <img
+                src="image/item1.jpg"
+                alt="item"
+                width="100%"
+                class="object-contain border"
+              />
+              <!-- 제목 -->
+              <div class="flex items-center mt-3">
+                <h1>건강식품 세트</h1>
+                <span
+                  class="rounded-md bg-blue-400 text-white pt-1 pb-1 pl-2 pr-2 ml-3"
+                  >건강식</span
+                >
+              </div>
+              <!-- 카테고리 -->
+              <div>
+                <script>
+                  numeral(30000).format('0,0')
+                </script>
+                30,000원
+              </div>
+              <div class="mt-2 border-t pt-2">
+                먹으면 건강해지는 식품. 흑마늘. 홍삼청 스틱형, 포
+              </div>
+            </div>
           </div>
         </div>
       </main>
-      <nav class="w-full border">
-        <iframe class="w-full" src="menu/index.html"></iframe>
+
+      <!-- 하단메뉴 -->
+      <nav
+        class="w-full h-[80px] border-t border-l border-r absolute bottom-0 overflow-hidden"
+      >
+        <iframe class="w-full h-full" src="menu/index.html"></iframe>
       </nav>
     </div>
+    <script src="swiper.js"></script>
   </body>
 </html>
