@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>상품 상세페이지</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../globalStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="overflow-hidden">
+    <div
+      style="max-width: 700px"
+      class="flex flex-col m-auto relative h-screen"
+    >
+      <header class="flex justify-between w-full border">
+        <h1 class="p-4">쇼핑몰</h1>
+        <ul class="flex justify-center items-center">
+          <li class="p-4 cursor-pointer">회원가입</li>
+          <li class="p-4 cursor-pointer">로그인</li>
+          <li class="p-4 cursor-pointer">로그아웃</li>
+        </ul>
+      </header>
+
+      <main
+        class="flex flex-col overflow-y-auto"
+        style="height: calc(100vh - 150px)"
+      >
+        <img
+          class="w-full h-[300px] object-contain"
+          src="../image/item1.jpg"
+          alt="item detail"
+        />
+
+        <div>
+          <span class="rounded-md bg-blue-400 text-white pt-1 pb-1 pl-2 pr-2"
+            >건강식</span
+          >
+          <h1 class="font-bold mt-3">건강식품 세트</h1>
+          <p class="text-sm pb-5 border-b-2 border-black mb-5">
+            건강을 지키는 데는 좋은 음식과 꾸준한 운동이 필수다. 하지만
+            중장년층은 음식과 운동만으로 건강을 유지하기가 힘들다. 그래서 필요한
+            것이 건강기능식품. 최근 40대 이상 중장년층의 건강 관심사 중 하나가
+            홍삼과 녹용이다. 한방에서 귀한 약재로 알려진 홍삼과 녹용은 몸을
+            따뜻하게 만들어주고 면역력을 키워줘 환절기 보약으로 많이 쓰인다.
+            인삼을 수증기로 쪄내 건조시킨 홍삼은 한국인이 가장 좋아하는
+            건강기능식품으로, 홍삼 속 사포닌 성분이 면역세포를 생성하고 활성화해
+            몸에 활력을 불어넣어준다. 특히<동의보감>에서는 홍삼에 대해
+            ‘오장육부의 기를 보충하고 여위고 약해진 것을 치료한다’고 기록하고
+            있을 만큼 아주 오래전부터 자양 강장 효과를 인정받아왔다. 또한 난임과
+            염증을 개선하고 당뇨 예방에도 효과가 있어 남녀노소 누구나 즐길 수
+            있는 보양 식품이다. 녹용 역시 귀하기로는 홍삼 못지않다. 불로장생을
+            상징하는 십장생 중 하나인 사슴의 뿔을 일컫는 녹용은 조선 왕조 임금의
+            건강을 지키는 데 쓰였으며 중국 고대 의약서인<신농본초경>에도 빼어난
+            효능이 기록되어 있다. 특히 한방에서는 녹용이 신경쇠약, 피로, 저혈압
+            등에 좋고 허리와 무릎이 시린 사람, 자궁이 약한 사람이 먹으면 좋다고
+            말한다.
+          </p>
+          <div class="flex flex-col space-y-4">
+            <div class="flex justify-between">
+              <span class="text-sm">판매가</span>
+              <span class="line-through font-bold">50,000원</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-sm">할인판매가</span>
+              <span class="font-bold text-red-400">40,000원</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-sm">타입</span>
+              <select class="border rounded-md px-2 py-1">
+                <option value="">- [필수] 타입 선택 -</option>
+                <option value="">포 50개</option>
+                <option value="">포 100개</option>
+                <option value="">스틱 50개</option>
+                <option value="">스틱 50개</option>
+              </select>
+            </div>
+          </div>
+          <div class="flex justify-between mt-10 space-x-4">
+            <button class="w-full h-20 border">장바구니</button>
+            <button class="w-full h-20 text-white bg-green-400">결제</button>
+          </div>
+        </div>
+      </main>
+
+      <nav class="w-full border-t border-l border-r absolute bottom-0 bg-white">
+        <ul class="flex justify-center w-full p-1">
+          <li class="flex flex-col flex-1 justify-center items-center">
+            <a href="/">
+              <img
+                src="../image/home.svg"
+                alt="home"
+                class="w-12 h-12 m-auto"
+              />
+              <p class="text-center">홈</p>
+            </a>
+          </li>
+          <li class="flex flex-col flex-1 justify-center items-center">
+            <a href="">
+              <img
+                src="../image/search.svg"
+                alt="search"
+                class="w-12 h-12 m-auto"
+              />
+              <p class="text-center">검색</p>
+            </a>
+          </li>
+          <li class="flex flex-col flex-1 justify-center items-center">
+            <a href="">
+              <img
+                src="../image/shopping-bag.svg"
+                alt="shopping bag"
+                class="w-12 h-12 m-auto"
+              />
+              <p class="text-center">장바구니</p>
+            </a>
+          </li>
+          <li class="flex flex-col flex-1 justify-center items-center">
+            <a href="">
+              <img
+                src="../image/user.svg"
+                alt="user"
+                class="w-12 h-12 m-auto"
+              />
+              <p class="text-center">마이페이지</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script src="swiper.js"></script>
+  </body>
+</html>

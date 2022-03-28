@@ -20,7 +20,6 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
   </head>
   <body class="overflow-hidden">
     <div
@@ -30,9 +29,9 @@
       <header class="flex justify-between w-full border">
         <h1 class="p-4">쇼핑몰</h1>
         <ul class="flex justify-center items-center">
-          <li class="p-4">회원가입</li>
-          <li class="p-4">로그인</li>
-          <li class="p-4">로그아웃</li>
+          <li class="p-4 cursor-pointer">회원가입</li>
+          <li class="p-4 cursor-pointer">로그인</li>
+          <li class="p-4 cursor-pointer">로그아웃</li>
         </ul>
       </header>
       <main>
@@ -59,10 +58,13 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
-        <div class="w-full mt-10">
+        <div class="w-full mt-10 mb-[40px]" style="overflow-y: auto">
           <h1 class="text-xl border-b pb-3 mb-3">추천상품</h1>
-          <div class="grid grid-rows-2 grid-flow-col gap-10">
-            <div class="w-full flex flex-col">
+          <div
+            class="grid grid-cols-2 gap-10"
+            style="height: calc(62vh - 200px)"
+          >
+            <a href="detail/index.html" class="flex flex-col cursor-pointer">
               <!-- 이미지 -->
               <img
                 src="image/item1.jpg"
@@ -88,8 +90,8 @@
               <div class="mt-2 border-t pt-2">
                 먹으면 건강해지는 식품. 흑마늘. 홍삼청 스틱형, 포
               </div>
-            </div>
-            <div class="w-full flex flex-col">
+            </a>
+            <a href="detail/index.html" class="flex flex-col cursor-pointer">
               <!-- 이미지 -->
               <img
                 src="image/item1.jpg"
@@ -115,8 +117,8 @@
               <div class="mt-2 border-t pt-2">
                 먹으면 건강해지는 식품. 흑마늘. 홍삼청 스틱형, 포
               </div>
-            </div>
-            <div class="w-full flex flex-col">
+            </a>
+            <a href="detail/index.html" class="flex flex-col cursor-pointer">
               <!-- 이미지 -->
               <img
                 src="image/item1.jpg"
@@ -142,16 +144,55 @@
               <div class="mt-2 border-t pt-2">
                 먹으면 건강해지는 식품. 흑마늘. 홍삼청 스틱형, 포
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </main>
 
       <!-- 하단메뉴 -->
-      <nav
-        class="w-full h-[80px] border-t border-l border-r absolute bottom-0 overflow-hidden"
-      >
-        <iframe class="w-full h-full" src="menu/index.html"></iframe>
+      <nav class="w-full border-t border-l border-r absolute bottom-0 bg-white">
+        <ul class="flex justify-center w-full p-1">
+          <li class="flex flex-col flex-1 justify-center items-center">
+            <a href="/">
+              <img
+                src="../image/home.svg"
+                alt="home"
+                class="w-12 h-12 m-auto"
+              />
+              <p class="text-center">홈</p>
+            </a>
+          </li>
+          <li class="flex flex-col flex-1 justify-center items-center">
+            <a href="">
+              <img
+                src="../image/search.svg"
+                alt="search"
+                class="w-12 h-12 m-auto"
+              />
+              <p class="text-center">검색</p>
+            </a>
+          </li>
+          <li class="flex flex-col flex-1 justify-center items-center">
+            <a href="">
+              <img
+                src="../image/shopping-bag.svg"
+                alt="shopping bag"
+                class="w-12 h-12 m-auto"
+              />
+              <p class="text-center">장바구니</p>
+            </a>
+          </li>
+          <li class="flex flex-col flex-1 justify-center items-center">
+            <a href="">
+              <img
+                src="../image/user.svg"
+                alt="user"
+                class="w-12 h-12 m-auto"
+              />
+              <p class="text-center">마이페이지</p>
+            </a>
+          </li>
+        </ul>
       </nav>
     </div>
     <script src="swiper.js"></script>
